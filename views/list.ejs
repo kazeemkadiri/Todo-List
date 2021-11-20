@@ -1,0 +1,26 @@
+<%- include("header") -%>
+
+<div class="box" id="heading">
+  <h1>Todo List</h1>
+</div>
+
+<div class="box">
+  <% for(let item of newItems){ %>
+  <div class="item">
+    <input type="checkbox" />
+    <p><%= item %></p>
+  </div>
+  <% } %>
+
+  <form action="/" method="post">
+    <input
+      type="text"
+      name="todoItem"
+      placeholder="New Item"
+      autocomplete="off"
+    />
+    <button type="submit">+</button>
+  </form>
+</div>
+
+<%- include("footer") -%>
